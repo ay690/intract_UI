@@ -1,10 +1,11 @@
-import { Navbar, Banner, Footer } from "./index"
+import { Navbar, Banner, Footer, Dictionary } from "./index"
 
 const Essentials = () => {
   return (
     <div>
       <Navbar />
       <Banner />
+      <Dictionary />
       <Footer />
     </div>
   )
