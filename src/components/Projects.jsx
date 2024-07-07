@@ -27,7 +27,7 @@ const Projects = () => {
               />
             </div>
             <div className="absolute bottom-0 left-0 p-3 rounded-lg">
-              <p className="text-2xl font-semibold text-white text-opacity-95">
+              <p className="text-md white text- fontextt-semibold lg:text-2xl text-opacity-95">
                 {project?.title}
               </p>
             </div>
