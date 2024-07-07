@@ -10,6 +10,7 @@ const Navbar = () => {
               <img
                 src="https://www.intract.io/logo/intract_text.svg"
                 className="w-32 h-20"
+                alt="Logo"
               />
             </a>
           </div>
@@ -33,23 +34,26 @@ const Navbar = () => {
             </nav>
           </div>
 
-          <div className="flex items-center gap-4">
-            <div className="sm:flex sm:gap-4">
+          <div className="flex items-center justify-center gap-4">
+            <div className="flex items-center justify-between gap-10 md:gap-4">
               <div className="flex items-center justify-center gap-4">
-                <input
-                  placeholder="Search for ecosystems, trending quests etc."
-                  className="hidden lg:block outline-none bg-custom-black text-gray-600 lg:w-[400px] lg:p-2 border rounded-lg"
-                />
-                <HiMagnifyingGlass
-                  size={20}
-                  color="white"
-                  className="bg-[#00000040] rounded-full"
-                />
+                <div className="relative">
+                  <input
+                    placeholder="Search for ecosystems, trending quests etc."
+                    className="hidden lg:block outline-none bg-custom-black text-gray-600 w-full lg:w-[400px] p-2 border rounded-full pl-10"
+                  />
+                  <HiMagnifyingGlass
+                    size={22}
+                    color="white"
+                    className="absolute p-1 transform -translate-y-1/2 bg-gray-500 rounded-full left-3 top-1/2"
+                  />
+                </div>
               </div>
-              <a className="block text-teal-600" href="#">
+              <a className=" sm:block" href="#">
                 <img
                   src="https://www.intract.io/assets/broadcast_or-04af786c.svg"
-                  className="w-8 h-10"
+                  className="w-10 h-10 p-2 border-2 border-yellow-700 rounded-full"
+                  alt="Broadcast Icon"
                 />
               </a>
 
@@ -62,7 +66,6 @@ const Navbar = () => {
                 </a>
               </div>
               <button className="block rounded bg-gray-100 p-2.5 text-gray-600 transition hover:text-gray-600/75 md:hidden">
-                <span className="sr-only">Toggle menu</span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="w-5 h-5"
