@@ -2,14 +2,14 @@ import { HiMagnifyingGlass } from "react-icons/hi2";
 
 const Navbar = () => {
   return (
-    <header className="bg-[#00000040] p-3 relative z-10">
-      <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
-        <div className="flex h-16 items-center justify-between">
+    <header className="bg-[#00000040] opacity-65 p-3 relative z-10">
+      <div className="max-w-screen-xl px-4 mx-auto sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-16">
           <div className="md:flex md:items-center md:gap-12">
             <a className="block" href="#">
               <img
                 src="https://www.intract.io/logo/intract_text.svg"
-                className="h-20 w-32"
+                className="w-32 h-20"
               />
             </a>
           </div>
@@ -35,7 +35,7 @@ const Navbar = () => {
 
           <div className="flex items-center gap-4">
             <div className="sm:flex sm:gap-4">
-              <div className="flex justify-center gap-4 items-center">
+              <div className="flex items-center justify-center gap-4">
                 <input
                   placeholder="Search for ecosystems, trending quests etc."
                   className="hidden lg:block outline-none bg-custom-black text-gray-600 lg:w-[400px] lg:p-2 border rounded-lg"
@@ -49,7 +49,7 @@ const Navbar = () => {
               <a className="block text-teal-600" href="#">
                 <img
                   src="https://www.intract.io/assets/broadcast_or-04af786c.svg"
-                  className="h-10 w-8"
+                  className="w-8 h-10"
                 />
               </a>
 
@@ -65,7 +65,7 @@ const Navbar = () => {
                 <span className="sr-only">Toggle menu</span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="h-5 w-5"
+                  className="w-5 h-5"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
