@@ -3,7 +3,7 @@ import { projects } from "../constants/Project";
 
 const Projects = () => {
   return (
-    <div className="w-full max-w-screen-xl px-4 py-10 mx-auto text-white">
+    <div className="w-full max-w-screen-xl px-4 py-10 mx-auto text-white mt-96">
       <div className="mb-5">
         <h2 className="text-3xl text-center">
           Top Crypto Creators and Projects to Follow
