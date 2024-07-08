@@ -1,8 +1,9 @@
 import { IoBookOutline } from "react-icons/io5";
+import ToggleSwitch from './ToggleSwitch';  
 
 const Dictionary = () => {
   return (
-    <div className="w-full max-w-screen-xl px-4 py-10 mx-auto text-white sm:px-6 md:px-8">
+    <div className="relative w-full max-w-screen-xl px-4 py-10 mx-auto text-white sm:px-6 md:px-8">
       <div className="mb-5">
         <h2 className="text-2xl text-center sm:text-3xl">Crypto Dictionary</h2>
         <h3 className="mt-1 text-sm text-center opacity-50 sm:text-base">
@@ -36,6 +37,7 @@ const Dictionary = () => {
           </a>
         </div>
       </div>
+      <ToggleSwitch />
     </div>
   );
 };
