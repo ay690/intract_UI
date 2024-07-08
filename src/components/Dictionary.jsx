@@ -1,5 +1,5 @@
 import { IoBookOutline } from "react-icons/io5";
-import ToggleSwitch from './ToggleSwitch';  
+import ToggleSwitch from "./ToggleSwitch";
 
 const Dictionary = () => {
   return (
@@ -19,10 +19,14 @@ const Dictionary = () => {
         />
         <div className="absolute text-center bottom-5 left-5 sm:left-10 md:left-20 lg:left-48 md:text-left">
           <p className="text-base font-bold sm:text-lg md:text-xl">
-            <span className="text-white text-opacity-50">Web3+ Degen Glossary</span>
+            <span className="text-white text-opacity-50">
+              Web3+ Degen Glossary
+            </span>
           </p>
           <p className="text-xs sm:text-sm md:text-base">
-            <span className="text-white opacity-50">Your own crypto dictionary</span>
+            <span className="text-white opacity-50">
+              Your own crypto dictionary
+            </span>
           </p>
         </div>
 

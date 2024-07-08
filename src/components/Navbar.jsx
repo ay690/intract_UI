@@ -1,8 +1,30 @@
+import { useEffect, useState } from "react";
 import { HiMagnifyingGlass } from "react-icons/hi2";
 
 const Navbar = () => {
+  const [isFloating, setIsFloating] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 10) {
+        setIsFloating(true);
+      } else {
+        setIsFloating(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <header className="bg-[#00000040] opacity-65 p-3 relative z-10">
+    <header
+      className={`bg-[#00000040] opacity-65 p-3 relative z-10 ${
+        isFloating
+          ? "fixed top-0 left-0 right-0 backdrop-filter backdrop-blur-lg"
+          : ""
+      }`}
+    >
       <div className="max-w-screen-xl px-4 mx-auto sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="md:flex md:items-center md:gap-12">
@@ -19,7 +41,7 @@ const Navbar = () => {
             <nav aria-label="Global">
               <ul className="flex items-center gap-6 text-sm">
                 {["Compass", "Explore", "Academy", "NFTs", "For Projects"].map(
-                  (item) => (
+                  (item, index) => (
                     <li key={item} className="relative pb-2">
                       <a
                         className="text-gray-500 text-lg transition hover:text-gray-500/75 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-1 after:bg-white after:transform after:scale-x-0 after:transition-transform after:duration-300 hover:after:scale-x-100"
@@ -27,6 +49,9 @@ const Navbar = () => {
                       >
                         {item}
                       </a>
+                      {index === 2 && (
+                        <span className="absolute bottom-0 left-0 w-full h-1 transition-transform duration-300 transform scale-x-0 bg-white group-hover:scale-x-100"></span>
+                      )}
                     </li>
                   )
                 )}
