@@ -6,6 +6,7 @@ import {
   Projects,
   RoadMap,
   RoadMap2,
+  Timer,
 } from "./index";
 
 const Essentials = () => {
@@ -15,6 +16,7 @@ const Essentials = () => {
       <Banner />
       <RoadMap />
       <RoadMap2 />
+      <Timer />
       <Projects />
       <Dictionary />
       <Footer />
