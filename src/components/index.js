@@ -7,5 +7,6 @@ import RoadMap from "./RoadMap";
 import RoadMap2 from "./RoadMap2";
 import Timer from "./Timer";
 import Gif from "./Gif";
+import RewardInfo from "./RewardInfo";
 
-export { Navbar, Banner, Footer, Dictionary, Projects, RoadMap, RoadMap2, Timer, Gif };
+export { Navbar, Banner, Footer, Dictionary, Projects, RoadMap, RoadMap2, Timer, Gif, RewardInfo };
