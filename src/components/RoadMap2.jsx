@@ -3,7 +3,7 @@ import { questItems2 } from "../constants/Quest";
 import { TbCoinTakaFilled } from "react-icons/tb";
 import { GoTriangleDown, GoTriangleUp } from "react-icons/go";
 import { TiTick } from "react-icons/ti";
-// import { IoIosLock } from "react-icons/io";
+import { IoIosLock } from "react-icons/io";
 
 const RoadMap2 = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -88,6 +88,35 @@ const RoadMap2 = () => {
         )}
 
         {/* Additional section */}
+        <div className="absolute flex flex-col items-center mt-40 transform -translate-y-1/2 left-[-500px] top-1/2">
+          <div className="p-2 bg-gray-800 bg-opacity-50 rounded-full">
+            <TiTick size={20} color="white" />
+          </div>
+          <div className="flex flex-col items-center justify-center gap-3 mt-3">
+            <img
+              src="https://static.highongrowth.xyz/erc1155-images/65017d014e5f24613adbfd67/83bd377d91ff441aa6f7c46a63c88506.png"
+              className="relative w-40 rounded-lg h-52"
+            />
+
+            <div className="absolute text-center text-white rounded-full right-32 top-60 bg-white/20 ring-1 ring-black/5">
+              <IoIosLock size={30} color="gray" />
+            </div>
+
+            <div className="relative ml-32 text-white">
+              <h2 className="text-xl sm:text-2xl">
+                Intract Certified: Earner NFT
+              </h2>
+              <h3 className="mt-1 text-sm opacity-50 sm:text-base">
+                Your proof of airdrop expertise
+              </h3>
+              <div className="mt-3">
+                <button className="w-64 p-5 rounded-full shadow-lg opacity-50 bg-white/20 ring-1 ring-black/5">
+                  Claim
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </>
   );
