@@ -1,4 +1,12 @@
-import { Navbar, Banner, Footer, Dictionary, Projects, RoadMap } from "./index";
+import {
+  Navbar,
+  Banner,
+  Footer,
+  Dictionary,
+  Projects,
+  RoadMap,
+  RoadMap2,
+} from "./index";
 
 const Essentials = () => {
   return (
@@ -6,6 +14,7 @@ const Essentials = () => {
       <Navbar />
       <Banner />
       <RoadMap />
+      <RoadMap2 />
       <Projects />
       <Dictionary />
       <Footer />
