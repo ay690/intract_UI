@@ -20,10 +20,10 @@ const Projects = () => {
               src={project.image}
               className="transition-transform transform rounded-lg w-80 h-96 group-hover:blur-sm"
             />
-            <div className="absolute p-5 bg-black bg-opacity-50 rounded-full top-1 right-20 lg:right-3 ">
+            <div className="absolute p-5 bg-black bg-opacity-50 rounded-full top-1 right-20 lg:right-3 hover:cursor-pointer">
               <img
                 src="https://cdn.iconscout.com/icon/premium/png-512-thumb/reel-video-9601984-8212597.png?f=webp&w=256"
-                className="w-6 h-6 rounded-lg"
+                className="w-6 h-6 rounded-lg hover:cursor-pointer"
               />
             </div>
             <div className="absolute bottom-0 left-0 p-3 rounded-lg">
@@ -32,7 +32,7 @@ const Projects = () => {
               </p>
             </div>
             <div className="absolute inset-0 flex items-center justify-center transition-opacity opacity-0 group-hover:opacity-100">
-              <div className="p-3 bg-black rounded-full bg-opacity-70">
+              <div className="p-3 bg-black rounded-full bg-opacity-70 hover:cursor-pointer">
                 <CiPlay1 className="text-2xl text-white" />
               </div>
             </div>
