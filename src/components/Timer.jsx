@@ -36,7 +36,7 @@ const Timer = () => {
   };
 
   return (
-    <div className="relative max-w-md p-5 mx-auto text-white rounded-lg max-h-mdscreen mt-52 bg-white/20 ring-1 ring-black/5 opacity-70">
+    <div className="relative max-w-md max-h-screen p-5 mx-auto text-white rounded-lg mt-52 bg-white/20 ring-1 ring-black/5 opacity-70">
       <div className="flex items-center justify-start gap-3">
         <GoClock size={15} color="orange" />
         <h2 className="text-[#6D737A]">Rewards unlock in </h2>

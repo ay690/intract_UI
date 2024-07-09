@@ -11,5 +11,21 @@ import RewardInfo from "./RewardInfo";
 import Essentials from "./Essentials";
 import AlphaHubs from "./AlphaHubs";
 import Academy from "./Academy";
+import Slider from "./Slider";
 
-export { Navbar, Banner, Footer, Dictionary, Projects, RoadMap, RoadMap2, Timer, Gif, RewardInfo, Essentials, AlphaHubs, Academy };
+export {
+  Navbar,
+  Banner,
+  Footer,
+  Dictionary,
+  Projects,
+  RoadMap,
+  RoadMap2,
+  Timer,
+  Gif,
+  RewardInfo,
+  Essentials,
+  AlphaHubs,
+  Academy,
+  Slider,
+};
