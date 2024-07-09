@@ -6,6 +6,7 @@ import { cards } from "../constants/Farcaster";
 
 const Farcaster = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isHovered, setIsHovered] = useState(false);
 
   const handlePrevClick = () => {
     setCurrentIndex((prevIndex) =>
@@ -75,10 +76,12 @@ const Farcaster = () => {
         {/**********  right section  ***************/}
 
         <div className="relative flex w-[700px] gap-3 p-3">
-          {cards.slice(currentIndex, currentIndex + 2).map((card) => (
+          {cards?.slice(currentIndex, currentIndex + 2)?.map((card) => (
             <div
               key={card.id}
-              className="w-full p-3 rounded-lg opacity-70 bg-white/20"
+              className="w-full p-3 rounded-lg opacity-70 bg-white/20 hover:cursor-pointer"
+              onMouseEnter={() => setIsHovered(true)}
+              onMouseLeave={() => setIsHovered(false)}
             >
               <div
                 className={`relative flex items-center justify-center overflow-hidden p-4 h-[250px] ${card.background} rounded-lg`}
@@ -100,12 +103,20 @@ const Farcaster = () => {
 
               <div className="w-full mt-3 border-t border-gray-600"></div>
 
-              <div className="flex items-center justify-start gap-3 bg-[rgba(255, 255, 255, 0.07)]">
-                <div className="flex items-start gap-2 p-3 mt-2 rounded-full bg-white/20 bg-opacity-20">
+              {/* this div should keep sliding or moving continuolsy in a loop when I hover     */}
+              
+              <div
+                className="flex items-center justify-start gap-3 bg-[rgba(255, 255, 255, 0.07)]"
+                style={{
+                  animation: isHovered
+                    ? "infinite-scroll 25s linear infinite"
+                    : "none",
+                }}
+              >
+                <div className="flex items-center gap-2 p-3 mt-2 rounded-full bg-white/20 bg-opacity-20">
                   <MdOutlineViewDay size={20} color="red" />
                   <span>{card.tasks} Tasks</span>
                 </div>
-
                 <div className="flex w-32 gap-2 p-3 mt-2 rounded-full bg-opacity-20 bg-white/20">
                   <TbCoinTakaFilled color="gold" size={20} />
                   <span>{card.xps} XPs</span>
