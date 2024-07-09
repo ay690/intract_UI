@@ -13,6 +13,7 @@ import AlphaHubs from "./AlphaHubs";
 import Academy from "./Academy";
 import Slider from "./Slider";
 import PopularNarrative from "./PopularNarrative";
+import Farcaster from "./Farcaster";
 
 export {
   Navbar,
@@ -29,5 +30,6 @@ export {
   AlphaHubs,
   Academy,
   Slider,
-  PopularNarrative
+  PopularNarrative,
+  Farcaster,
 };
