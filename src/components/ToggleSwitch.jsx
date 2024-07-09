@@ -1,10 +1,14 @@
-import { useState, useEffect } from "react";
+import {  useEffect } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 
 const ToggleSwitch = () => {
-  const [active, setActive] = useState("Essentials");
+  const navigate = useNavigate();
+  const location = useLocation();
+  const searchParams = new URLSearchParams(location.search);
+  const tab = searchParams.get("tab") || "essentials";
 
   const handleToggle = (label) => {
-    setActive(label);
+    navigate(`/academy?tab=${label}`);
   };
 
   useEffect(() => {
@@ -43,9 +47,9 @@ const ToggleSwitch = () => {
       className="relative flex items-center p-1 transform -translate-x-1/2 bg-white rounded-full cursor-pointer bottom-5 left-1/2 bg-opacity-20 backdrop-filter backdrop-blur-lg"
     >
       <div
-        onClick={() => handleToggle("Essentials")}
+        onClick={() => handleToggle("essentials")}
         className={`px-4 py-2 rounded-full ${
-          active === "Essentials"
+          tab === "essentials"
             ? "bg-white bg-opacity-50"
             : "text-white text-opacity-50"
         }`}
@@ -53,9 +57,9 @@ const ToggleSwitch = () => {
         Essentials
       </div>
       <div
-        onClick={() => handleToggle("AlphaHub")}
+        onClick={() => handleToggle("alpha-hub")}
         className={`px-4 py-2 rounded-full ${
-          active === "AlphaHub"
+          tab === "alpha-hub"
             ? "bg-white bg-opacity-50"
             : "text-white text-opacity-50"
         }`}

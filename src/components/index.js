@@ -8,5 +8,8 @@ import RoadMap2 from "./RoadMap2";
 import Timer from "./Timer";
 import Gif from "./Gif";
 import RewardInfo from "./RewardInfo";
+import Essentials from "./Essentials";
+import AlphaHubs from "./AlphaHubs";
+import Academy from "./Academy";
 
-export { Navbar, Banner, Footer, Dictionary, Projects, RoadMap, RoadMap2, Timer, Gif, RewardInfo };
+export { Navbar, Banner, Footer, Dictionary, Projects, RoadMap, RoadMap2, Timer, Gif, RewardInfo, Essentials, AlphaHubs, Academy };
