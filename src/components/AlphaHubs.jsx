@@ -1,4 +1,12 @@
-import { Navbar, Banner, Footer, Dictionary, Projects, Slider } from "./index";
+import {
+  Navbar,
+  Banner,
+  Footer,
+  Dictionary,
+  Projects,
+  Slider,
+  PopularNarrative,
+} from "./index";
 
 const AlphaHubs = () => {
   return (
@@ -6,6 +14,7 @@ const AlphaHubs = () => {
       <Navbar />
       <Banner />
       <Slider />
+      <PopularNarrative />
       <Projects />
       <Dictionary />
       <Footer />

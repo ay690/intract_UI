@@ -12,6 +12,7 @@ import Essentials from "./Essentials";
 import AlphaHubs from "./AlphaHubs";
 import Academy from "./Academy";
 import Slider from "./Slider";
+import PopularNarrative from "./PopularNarrative";
 
 export {
   Navbar,
@@ -28,4 +29,5 @@ export {
   AlphaHubs,
   Academy,
   Slider,
+  PopularNarrative
 };
