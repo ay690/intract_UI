@@ -27,7 +27,7 @@ const Slider = () => {
 
   return (
     <>
-      <div className="flex items-start pl-4 mb-3 text-lg font-semibold text-white sm:pl-8 md:pl-16 sm:text-xl md:text-2xl">
+      <div className="flex items-start pl-4 mb-3 text-lg font-semibold text-white sm:pl-8 md:pl-64 sm:text-xl md:text-2xl">
         <h1>Daily New Alpha for You</h1>
       </div>
       <div className="relative max-w-full p-5 mx-auto text-white bg-opacity-25 rounded-lg md:p-3 md:max-w-5xl bg-white/20">
