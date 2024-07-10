@@ -16,6 +16,7 @@ import PopularNarrative from "./PopularNarrative";
 import Farcaster from "./Farcaster";
 import RecommendedNarrative from "./RecommendedNarrative";
 import Lens from "./Lens";
+import Grass from "./Grass";
 
 export {
   Navbar,
@@ -34,6 +35,7 @@ export {
   Slider,
   PopularNarrative,
   Lens,
+  Grass,
   RecommendedNarrative,
   Farcaster,
 };
