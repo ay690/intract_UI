@@ -6,7 +6,7 @@ import { cards } from "../constants/Farcaster";
 
 const Farcaster = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [isHovered, setIsHovered] = useState(false);
+  const [hoveredCardId, setHoveredCardId] = useState(null);
 
   const handlePrevClick = () => {
     setCurrentIndex((prevIndex) =>
@@ -80,8 +80,8 @@ const Farcaster = () => {
             <div
               key={card.id}
               className="w-full p-3 rounded-lg opacity-70 bg-white/20 hover:cursor-pointer"
-              onMouseEnter={() => setIsHovered(true)}
-              onMouseLeave={() => setIsHovered(false)}
+              onMouseEnter={() => setHoveredCardId(card.id)}
+              onMouseLeave={() => setHoveredCardId(null)}
             >
               <div
                 className={`relative flex items-center justify-center overflow-hidden p-4 h-[250px] ${card.background} rounded-lg`}
@@ -103,23 +103,22 @@ const Farcaster = () => {
 
               <div className="w-full mt-3 border-t border-gray-600"></div>
 
-              {/* this div should keep sliding or moving continuolsy in a loop when I hover     */}
-              
-              <div
-                className="flex items-center justify-start gap-3 bg-[rgba(255, 255, 255, 0.07)]"
-                style={{
-                  animation: isHovered
-                    ? "infinite-scroll 25s linear infinite"
-                    : "none",
-                }}
-              >
-                <div className="flex items-center gap-2 p-3 mt-2 rounded-full bg-white/20 bg-opacity-20">
-                  <MdOutlineViewDay size={20} color="red" />
-                  <span>{card.tasks} Tasks</span>
-                </div>
-                <div className="flex w-32 gap-2 p-3 mt-2 rounded-full bg-opacity-20 bg-white/20">
-                  <TbCoinTakaFilled color="gold" size={20} />
-                  <span>{card.xps} XPs</span>
+              {/* Infinite scroll div */}
+              <div className="overflow-hidden h-[50px] mt-2">
+                <div
+                  className={`flex items-center gap-3 ${
+                    hoveredCardId === card.id ? "animate-infinite-scroll" : ""
+                  }`}
+                >
+                  <div className="flex items-center gap-2 p-3 rounded-full bg-white/20 bg-opacity-20">
+                    <MdOutlineViewDay size={20} color="red" />
+                    <span>{card.tasks} Tasks</span>
+                  </div>
+                  <div className="flex w-32 gap-2 p-3 rounded-full bg-opacity-20 bg-white/20">
+                    <TbCoinTakaFilled color="gold" size={20} />
+                    <span>{card.xps} XPs</span>
+                  </div>
+
                 </div>
               </div>
             </div>
