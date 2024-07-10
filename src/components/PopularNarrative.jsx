@@ -1,9 +1,10 @@
-import { Farcaster } from "./index";
+import { Farcaster, Lens } from "./index";
 
 const PopularNarrative = () => {
   return (
     <>
       <Farcaster />
+      <Lens />
     </>
   );
 };
