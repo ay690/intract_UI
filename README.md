@@ -1,8 +1,21 @@
-# React + Vite
+# IntractUI
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Explore our Academy page where learning meets innovation. Navigate seamlessly through essential tools like the Banner, RoadMap, Timer, and Dictionary. Engage with curated updates and explore diverse narratives in our Popular Narratives section with intuitive sliders. Discover the Alpha Hub for deeper insights and switch effortlessly between categories. Crafted with Tailwind CSS and React JS for a fluid and responsive experience.
 
-Currently, two official plugins are available:
+# Snippets
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<img src="./src/snippets/Banner.png" />
+<img src="./src/snippets/Roadmap.png" />
+<img src="./src/snippets/Timer.png" />
+<img src="./src/snippets/Popular.png" />
+<img src="./src/snippets/Recommend.png" />
+<img src="./src/snippets/dictionary.png" />
+<img src="./src/snippets/Footer.png" />
+
+# Tech Stacks
+
+React-Vite, Javascript, TailwindCSS
+
+# Instructions
+
+To start, clone the repository by executing the command: "git clone [https://github.com/ay690/intract_UI.git]". After cloning, navigate into the repository directory and install dependencies using the command "npm install". Once the installation is complete, run the code with "npm run dev". Ensure to execute these commands in your terminal.
