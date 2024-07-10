@@ -22,13 +22,13 @@ const Farcaster = () => {
 
   return (
     <>
-      <div className="flex items-start pl-64 mt-10 mb-16 text-xl font-semibold text-white md:text-2xl">
+      <div className="flex items-start pl-4 mt-10 mb-16 text-xl font-semibold text-white md:text-2xl md:pl-64">
         <h1>Popular Narrative</h1>
       </div>
-      <div className="relative flex max-w-5xl mx-auto text-white bg-opacity-25 opacity-75 rounded-xl bg-white/20">
+      <div className="relative flex flex-col max-w-full mx-auto text-white bg-opacity-25 opacity-75 md:flex-row md:max-w-5xl rounded-xl bg-white/20">
         {/***********  left section **********/}
 
-        <div className="object-fill bg-black w-[400px]  opacity-35 rounded-s-xl">
+        <div className="object-fill bg-black w-full md:w-[400px] opacity-35 rounded-t-xl md:rounded-t-none md:rounded-l-xl">
           <div className="flex flex-col gap-5 p-4 mt-5">
             <h2 className="text-lg font-bold">Exploring Farcaster</h2>
             <h3>
@@ -75,7 +75,7 @@ const Farcaster = () => {
 
         {/**********  right section  ***************/}
 
-        <div className="relative flex w-[700px] gap-3 p-3">
+        <div className="relative flex flex-col w-full gap-3 p-3 md:flex-row lg:w-[700px]">
           {cards?.slice(currentIndex, currentIndex + 2)?.map((card) => (
             <div
               key={card.id}
@@ -118,7 +118,6 @@ const Farcaster = () => {
                     <TbCoinTakaFilled color="gold" size={20} />
                     <span>{card.xps} XPs</span>
                   </div>
-
                 </div>
               </div>
             </div>
@@ -127,14 +126,14 @@ const Farcaster = () => {
           {/********** Arrow keys ************/}
 
           <div
-            className="absolute p-3 -left-0 top-44 bg-white/20 opacity-65 hover:cursor-pointer"
+            className="absolute left-0 p-3 transform -translate-y-1/2 top-1/2 bg-white/20 opacity-65 hover:cursor-pointer"
             onClick={handlePrevClick}
           >
             <FaAngleLeft size={30} />
           </div>
 
           <div
-            className="absolute right-0 p-3 top-44 bg-white/20 opacity-65 hover:cursor-pointer"
+            className="absolute right-0 p-3 transform -translate-y-1/2 top-1/2 bg-white/20 opacity-65 hover:cursor-pointer"
             onClick={handleNextClick}
           >
             <FaAngleRight size={30} />
