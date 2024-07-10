@@ -14,6 +14,7 @@ import Academy from "./Academy";
 import Slider from "./Slider";
 import PopularNarrative from "./PopularNarrative";
 import Farcaster from "./Farcaster";
+import RecommendedNarrative from "./RecommendedNarrative";
 
 export {
   Navbar,
@@ -31,5 +32,6 @@ export {
   Academy,
   Slider,
   PopularNarrative,
+  RecommendedNarrative,
   Farcaster,
 };

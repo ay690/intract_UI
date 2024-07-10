@@ -6,6 +6,7 @@ import {
   Projects,
   Slider,
   PopularNarrative,
+  RecommendedNarrative,
 } from "./index";
 
 const AlphaHubs = () => {
@@ -15,6 +16,7 @@ const AlphaHubs = () => {
       <Banner />
       <Slider />
       <PopularNarrative />
+      <RecommendedNarrative />
       <Projects />
       <Dictionary />
       <Footer />
