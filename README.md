@@ -2,6 +2,10 @@
 
 Explore our Academy page where learning meets innovation. Navigate seamlessly through essential tools like the Banner, RoadMap, Timer, and Dictionary. Engage with curated updates and explore diverse narratives in our Popular Narratives section with intuitive sliders. Discover the Alpha Hub for deeper insights and switch effortlessly between categories. Crafted with Tailwind CSS and React JS for a fluid and responsive experience.
 
+# Youtube
+
+https://youtu.be/omdfJkLESdc?si=ozELn23JSXj6gYzX
+
 # Link
 
 https://intract-ui.netlify.app/academy
