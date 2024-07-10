@@ -60,7 +60,7 @@ const Slider = () => {
             </div>
 
             <div className="bg-[#6435e9] mt-10 md:mt-20 rounded-lg px-6 py-2 sm:px-8 sm:py-2 md:px-12 md:py-3 text-sm md:text-base font-medium text-white shadow focus:outline-none focus:ring w-auto">
-              <button className="hover:cursor-pointer">Begin Journey</button>
+              <button className="hover:cursor-pointer hover:translate-x-1">Begin Journey</button>
             </div>
           </div>
         </div>

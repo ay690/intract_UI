@@ -60,7 +60,7 @@ const Lens = () => {
             <span>70 XPs</span>
           </div>
           <div className="bg-[#6435e9] rounded-lg text-center p-3 text-white focus:ring w-full">
-            <button className="flex items-center justify-center w-full hover:cursor-pointer">
+            <button className="flex items-center justify-center w-full hover:cursor-pointer hover:translate-x-1">
               <span className="mr-2">Start here</span>
               <FaArrowRight size={20} color="white" />
             </button>
