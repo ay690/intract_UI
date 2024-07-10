@@ -23,3 +23,7 @@ React-Vite, Javascript, TailwindCSS
 # Instructions
 
 To start, clone the repository by executing the command: "git clone [https://github.com/ay690/intract_UI.git]". After cloning, navigate into the repository directory and install dependencies using the command "npm install". Once the installation is complete, run the code with "npm run dev". Ensure to execute these commands in your terminal.
+
+# Video Link
+
+https://drive.google.com/file/d/1AkSg677LwDye5P-84WiTCkLS9h-3dCho/view
