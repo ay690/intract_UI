@@ -10,7 +10,7 @@ const Banner = () => {
           <div className="flex items-center justify-center">
             <img
               src="https://www.intract.io/assets/academy-animated-logo-57b2ae61.gif"
-              className="h-20 w-44"
+              className="h-20 w-44 blend-gif"
               alt="Intract Academy Logo"
             />
           </div>
