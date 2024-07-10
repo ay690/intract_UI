@@ -19,7 +19,7 @@ const Essentials = () => {
         <Banner />
         <RoadMap />
         <RoadMap2 />
-        <div className="flex items-center justify-center max-w-5xl gap-20 mx-auto">
+        <div className="flex flex-col items-center justify-center max-w-5xl gap-10 mx-auto mt-64 lg:mt-20 md:flex-row md:gap-20">
           <div>
             <Timer />
             <Gif />

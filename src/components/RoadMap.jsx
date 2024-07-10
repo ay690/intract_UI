@@ -13,21 +13,21 @@ const RoadMap = () => {
   };
 
   return (
-    <>
-      <div className="relative max-w-xl max-h-screen p-10 mx-24 text-white rounded-lg bg-white/20 ring-1 ring-black/5 opacity-70">
-        <div className="flex items-center justify-start gap-8">
-          <div className="relative overflow-hidden">
+    <div className="max-w-screen-xl px-6 mx-auto text-white lg:px-24">
+      <div className="relative rounded-lg bg-white/20 ring-1 ring-black/5 opacity-70 lg:max-w-xl lg:p-10 lg:mx-24">
+        <div className="flex flex-col items-center justify-start lg:flex-row lg:gap-8">
+          <div className="relative mb-6 overflow-hidden lg:mb-0 lg:mr-8">
             <img
               src="https://static.highongrowth.xyz/enterprise/65017d014e5f24613adbfd67/2d1ac16ea7c9416d94a74f2ba2fe8d4a.png"
-              className="object-cover border-4 border-gray-500 rounded-md h-80 w-80"
+              className="object-cover w-full border-4 border-gray-500 rounded-md h-80 lg:w-80"
             />
             <div className="absolute p-2 text-center transform -translate-x-1/2 bg-white rounded-full left-1/2 bottom-6 bg-opacity-20 backdrop-blur-md">
               <p className="text-white">6 Quest</p>
             </div>
           </div>
           <div className="flex flex-col gap-2">
-            <h2 className="text-2xl sm:text-3xl">Basics of Crypto</h2>
-            <h3 className="mt-1 text-sm opacity-50 sm:text-base">
+            <h2 className="text-2xl lg:text-3xl">Basics of Crypto</h2>
+            <h3 className="mt-1 text-sm opacity-50 lg:text-base">
               The safest and easiest place to start your crypto journey!
             </h3>
             <div className="mt-3 border-b border-gray-600 border-dotted"></div>
@@ -37,10 +37,7 @@ const RoadMap = () => {
             </div>
           </div>
         </div>
-        <div
-          className="absolute cursor-pointer top-4 right-4"
-          onClick={toggleMenu}
-        >
+        <div className="absolute cursor-pointer top-4 right-4" onClick={toggleMenu}>
           {isMenuOpen ? (
             <GoTriangleUp color="gray" size={20} />
           ) : (
@@ -49,47 +46,37 @@ const RoadMap = () => {
         </div>
 
         {isMenuOpen && (
-          <div
-            className="flex flex-col max-w-xl gap-3 mt-2 overflow-y-scroll"
-            style={{ maxHeight: "320px" }}
-          >
-            {questItems.map((quest) => (
-              <div
-                key={quest.id}
-                className="p-2 bg-gray-900 bg-opacity-25 rounded-lg"
-              >
-                <div className="flex items-center justify-start gap-4">
-                  <img
-                    src={quest.imageUrl}
-                    className="border-4 border-gray-500 rounded-lg w-28 h-28"
-                  />
-                  <div className="flex flex-col w-full gap-2">
-                    <h2 className="text-xl truncate sm:text-2xl">
-                      {quest.title}
-                    </h2>
-
-                    <div className="mt-1 border-b border-gray-600 border-dotted"></div>
-
-                    <div className="flex items-center justify-between gap-2">
-                      <h3 className="text-sm opacity-50 sm:text-base">
-                        {quest.tasks} Tasks
-                      </h3>
-                      <div className="flex items-center w-1/2 h-2 bg-gray-600 rounded-full">
-                        <div className="w-4/5 h-full bg-black rounded-full"></div>
-                      </div>
-                      <div className="p-2 bg-gray-800 bg-opacity-50 rounded-full">
-                        <TiTick size={20} color="white" />
+          <div className="mt-6 overflow-y-scroll rounded-lg lg:mt-0 lg:absolute lg:right-4 lg:top-4 lg:w-96 lg:max-h-80 bg-white/20 ring-1 ring-black/5 lg:max-w-xl">
+            <div className="flex flex-col gap-3 p-4 lg:p-2">
+              {questItems.map((quest) => (
+                <div key={quest.id} className="p-2 bg-gray-900 bg-opacity-25 rounded-lg">
+                  <div className="flex items-center justify-start gap-4">
+                    <img
+                      src={quest.imageUrl}
+                      className="border-4 border-gray-500 rounded-lg w-28 h-28"
+                    />
+                    <div className="flex flex-col w-full gap-2">
+                      <h2 className="text-xl truncate lg:text-2xl">{quest.title}</h2>
+                      <div className="mt-1 border-b border-gray-600 border-dotted"></div>
+                      <div className="flex items-center justify-between gap-2">
+                        <h3 className="text-sm opacity-50 lg:text-base">{quest.tasks} Tasks</h3>
+                        <div className="flex items-center w-1/2 h-2 bg-gray-600 rounded-full">
+                          <div className="w-4/5 h-full bg-black rounded-full"></div>
+                        </div>
+                        <div className="p-2 bg-gray-800 bg-opacity-50 rounded-full">
+                          <TiTick size={20} color="white" />
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         )}
 
         {/* Additional section */}
-        <div className="absolute flex flex-col items-center transform -translate-y-1/2 top-1/2 right-[-800px] mt-36">
+        <div className="absolute flex flex-col items-center transform -translate-y-1/2 top-[600px] lg:top-1/2 right-11 lg:right-[-600px] mt-36">
           <div className="p-2 bg-gray-800 bg-opacity-50 rounded-full">
             <TiTick size={20} color="white" />
           </div>
@@ -104,12 +91,8 @@ const RoadMap = () => {
             </div>
 
             <div className="relative ml-32 text-white">
-              <h2 className="text-xl sm:text-2xl">
-                Intract Certified: Learner NFT
-              </h2>
-              <h3 className="mt-1 text-sm opacity-50 sm:text-base">
-                Your crypto black-belt certificate
-              </h3>
+              <h2 className="text-xl lg:text-2xl">Intract Certified: Learner NFT</h2>
+              <h3 className="mt-1 text-sm opacity-50 lg:text-base">Your crypto black-belt certificate</h3>
               <div className="mt-3">
                 <button className="w-64 p-5 rounded-full shadow-lg opacity-50 bg-white/20 ring-1 ring-black/5">
                   Claim
@@ -119,7 +102,7 @@ const RoadMap = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

@@ -36,10 +36,12 @@ const Timer = () => {
   };
 
   return (
-    <div className="relative max-w-md max-h-screen p-5 mx-auto text-white rounded-lg mt-52 bg-white/20 ring-1 ring-black/5 opacity-70">
+    <div className="relative max-w-md p-5 mx-auto mt-56 text-white rounded-lg bg-white/20 ring-1 ring-black/5 opacity-70 sm:mt-20 md:mt-28 lg:mt-64">
       <div className="flex items-center justify-start gap-3">
         <GoClock size={15} color="orange" />
-        <h2 className="text-[#6D737A]">Rewards unlock in </h2>
+        <h2 className="text-[#6D737A] text-sm sm:text-base">
+          Rewards unlock in
+        </h2>
       </div>
       <div className="mt-3 border-t border-gray-600"></div>
       <div className="relative flex items-center justify-center mt-5">
@@ -47,14 +49,16 @@ const Timer = () => {
           src="https://www.intract.io/assets/dotBg-149528a0.png"
           className="absolute object-cover w-full h-20"
         />
-        <div className="relative z-10 text-3xl sm:text-5xl">
+        <div className="relative z-10 text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
           {Object.keys(timeLeft).length > 0 ? (
             <span>
               {formatTime(timeLeft.days)} : {formatTime(timeLeft.hours)} :{" "}
               {formatTime(timeLeft.minutes)} : {formatTime(timeLeft.seconds)}
             </span>
           ) : (
-            <span className="text-3xl sm:text-5xl">Timeapos;s up!</span>
+            <span className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
+              Time&apos;s up!
+            </span>
           )}
         </div>
       </div>
