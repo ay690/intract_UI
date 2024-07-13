@@ -1,10 +1,11 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback, useMemo } from "react";
 import { GoClock } from "react-icons/go";
 
 const Timer = () => {
-  const calculateTimeLeft = () => {
+  const end = useMemo(() => new Date(new Date().getTime() + 2 * 24 * 60 * 60 * 1000), []);// 2 days from now
+
+  const calculateTimeLeft = useCallback(() => {
     const now = new Date();
-    const end = new Date(now.getTime() + 2 * 24 * 60 * 60 * 1000); // 2 days from now
     const difference = end - now;
 
     let timeLeft = {};
@@ -19,7 +20,7 @@ const Timer = () => {
     }
 
     return timeLeft;
-  };
+  }, [end]);
 
   const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
 
@@ -29,7 +30,7 @@ const Timer = () => {
     }, 1000);
 
     return () => clearInterval(timer);
-  }, []);
+  }, [calculateTimeLeft]);
 
   const formatTime = (time) => {
     return time < 10 ? `0${time}` : time;
